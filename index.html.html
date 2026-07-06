@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Motorguiden | Reparation og justering af 2-takt og 4-takt knallerter</title>
+  <meta name="description" content="Motorguiden i Sønderborg Kommune tilbyder reparation, fejlfinding, justering og optimering af 2-takt og 4-takt scootere og knallerter. Kontakt via Facebook med #MotorGuiden." />
+  <meta name="keywords" content="Motorguiden, scooter reparation, knallert reparation, 2 takt, 4 takt, tunet scooter, Sønderborg, Sønderborg Kommune, knallert justering, scooter fejlfinding" />
+  <meta name="author" content="Motorguiden" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Motorguiden | 2-takt og 4-takt knallertservice" />
+  <meta property="og:description" content="Lokal hjælp i Sønderborg Kommune til reparation, justering, fejlfinding og optimering af scootere og knallerter." />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Motorguiden",
+    "description": "Reparation, fejlfinding, justering og optimering af 2-takt og 4-takt scootere og knallerter.",
+    "areaServed": "Sønderborg Kommune",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sønderborg Kommune",
+      "addressCountry": "DK"
+    },
+    "sameAs": [
+      "https://www.facebook.com/hashtag/motorguiden",
+      "https://www.youtube.com/@Motorguiden"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --blue: #0b4bb3;
+      --dark: #10131a;
+      --dark-soft: #191f2b;
+      --white: #ffffff;
+      --light: #f4f7fb;
+      --text: #243044;
+      --muted: #687386;
+      --line: rgba(255,255,255,0.14);
+      --shadow: 0 18px 45px rgba(0,0,0,0.18);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(16,19,26,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue), #2b78ff);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 25px rgba(11,75,179,0.38);
+      font-size: 23px;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .navlinks a:hover {
+      color: var(--white);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(43,120,255,0.42), transparent 36%),
+        linear-gradient(135deg, #0b1020 0%, #10131a 46%, #0b4bb3 120%);
+      color: var(--white);
+      padding: 78px 20px 48px;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.9);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(37px, 5.4vw, 68px);
+      line-height: 1.02;
+      margin: 0 0 18px;
+      letter-spacing: -1.8px;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2.2vw, 22px);
+      color: rgba(255,255,255,0.86);
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 18px;
+      border-radius: 14px;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--dark);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      color: var(--white);
+    }
+
+    .checklist {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: rgba(255,255,255,0.88);
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    section {
+      padding: 64px 20px;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 3.5vw, 44px);
+      line-height: 1.1;
+      margin: 0 0 12px;
+      color: var(--dark);
+      letter-spacing: -0.8px;
+    }
+
+    .section-subtitle {
+      margin: 0 0 30px;
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(16,19,26,0.08);
+      border: 1px solid rgba(16,19,26,0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--dark);
+      font-size: 21px;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: rgba(11,75,179,0.12);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .darkbox {
+      background: var(--dark);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .darkbox h2,
+    .darkbox h3 {
+      color: var(--white);
+      margin-top: 0;
+    }
+
+    .darkbox p {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .steps {
+      counter-reset: steps;
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid rgba(16,19,26,0.06);
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .step::before {
+      counter-increment: steps;
+      content: counter(steps);
+      width: 38px;
+      height: 38px;
+      border-radius: 13px;
+      background: var(--blue);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 900;
+      margin: 14px 0 6px;
+    }
+
+    .contact {
+      background:
+        radial-gradient(circle at bottom right, rgba(43,120,255,0.35), transparent 34%),
+        var(--dark);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact h2 {
+      color: var(--white);
+      margin: 0 0 12px;
+      font-size: clamp(30px, 3.5vw, 44px);
+      line-height: 1.08;
+    }
+
+    .contact p {
+      color: rgba(255,255,255,0.82);
+      font-size: 18px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .contact-row {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-row:last-child {
+      border-bottom: none;
+    }
+
+    .contact-row strong {
+      display: block;
+      color: var(--white);
+    }
+
+    .contact-row span {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .notice {
+      background: rgba(11,75,179,0.1);
+      border-left: 5px solid var(--blue);
+      padding: 18px 20px;
+      border-radius: 16px;
+      color: var(--text);
+      margin-top: 24px;
+    }
+
+    footer {
+      padding: 28px 20px;
+      text-align: center;
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .video-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(16,19,26,0.08);
+      border: 1px solid rgba(16,19,26,0.06);
+    }
+
+    .video-card h3 {
+      margin: 0 0 12px;
+      color: var(--dark);
+      font-size: 20px;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    @media (max-width: 850px) {
+      .hero-inner,
+      .grid,
+      .split,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .contact {
+        padding: 24px;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Motorguiden forside">
+        <span class="logo">⚙️</span>
+        <span>Motorguiden</span>
+      </a>
+      <div class="navlinks">
+        <a href="#ydelser">Ydelser</a>
+        <a href="#videoer">Videoer</a>
+        <a href="#proces">Sådan foregår det</a>
+        <a href="#om">Om</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="badge">📍 Lokal hjælp i Sønderborg Kommune</div>
+          <h1>Reparation og justering af 2-takt og 4-takt knallerter</h1>
+          <p class="lead">
+            Motorguiden hjælper med fejlfinding, reparation, justering og optimering af scootere og knallerter — også tunede 2-takt maskiner.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://www.facebook.com/search/top?q=%23MotorGuiden" target="_blank" rel="noopener">Kontakt via Facebook</a>
+            <a class="btn btn-secondary" href="https://www.youtube.com/@Motorguiden" target="_blank" rel="noopener">Se YouTube-kanal</a>
+            <a class="btn btn-secondary" href="#ydelser">Se hvad jeg tilbyder</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2>Det kan jeg hjælpe med</h2>
+          <ul class="checklist">
+            <li>✅ Fejlfinding på scooter og knallert</li>
+            <li>✅ Justering af tunet 2-takt motor</li>
+            <li>✅ Reparation og vedligehold</li>
+            <li>✅ Rådgivning om opsætning og dele</li>
+            <li>✅ Pris aftales efter opgaven</li>
+            <li>✅ Se videoer og eksempler på YouTube</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ydelser">
+      <div class="container">
+        <h2 class="section-title">Ydelser</h2>
+        <p class="section-subtitle">
+          Jeg arbejder praktisk og grundigt med fokus på, at maskinen skal køre rigtigt — ikke bare starte.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon">🔧</div>
+            <h3>Reparation</h3>
+            <p>Hjælp til motor, tænding, karburator, variator, rem, ruller og generel mekanisk gennemgang.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🏁</div>
+            <h3>Justering</h3>
+            <p>Opsætning og finjustering af især 2-takt motorer, så de kører renere, bedre og mere stabilt.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🛵</div>
+            <h3>Fejlfinding</h3>
+            <p>Systematisk gennemgang, hvor fejlen findes i stedet for bare at skifte dele på må og få.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="videoer">
+      <div class="container">
+        <h2 class="section-title">Videoer fra Motorguiden</h2>
+        <p class="section-subtitle">
+          Se nogle af mine videoer direkte her på siden. Her viser jeg praktisk arbejde med knallerter, scootere, 2-takt, fejlfinding og opsætning.
+        </p>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <h3>Seneste videoer fra kanalen</h3>
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=UUPZujfr7TCYWUvqr4zH_nmA" title="Seneste videoer fra Motorguiden på YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <h3>2-takt motor forklaret</h3>
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLt-fR5HeyqXA2V_yWwCjYb2N_MIz8JBnK" title="2-takt motor forklaret - Motorguiden playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <h3>PGO Hot 50 projekt</h3>
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLt-fR5HeyqXCXGxTszZ8MvKKK0X3vwELj" title="PGO Hot 50 Projekt - Motorguiden playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <h3>Italkit tuning</h3>
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/gUzrrCX44EI" title="Italkit Tuning - Motorguiden" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </article>
+        </div>
+
+        <div class="actions" style="margin-top: 24px;">
+          <a class="btn btn-primary" href="https://www.youtube.com/@Motorguiden" target="_blank" rel="noopener">Åbn YouTube-kanal</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="proces">
+      <div class="container split">
+        <div class="darkbox">
+          <h2>Pris efter opgave</h2>
+          <p>
+            Prisen aftales ud fra, hvilket arbejde der skal udføres. På den måde betaler du for den konkrete opgave og ikke en standardpakke, der måske ikke passer til problemet.
+          </p>
+          <div class="price">Aftales individuelt</div>
+          <p>Kontakt mig med billeder, beskrivelse af problemet og hvad maskinen gør.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h3>Skriv til mig</h3>
+              <p>Kontakt Motorguiden via Facebook. Søg efter <strong>#MotorGuiden</strong> eller brug knappen på siden.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Beskriv problemet</h3>
+              <p>Send gerne billeder, video og information om model, motor, opsætning og hvad der er lavet.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <h3>Vi aftaler arbejdet</h3>
+              <p>Vi aftaler opgaven, forventning og pris, før arbejdet sættes i gang.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="om">
+      <div class="container">
+        <h2 class="section-title">Om Motorguiden</h2>
+        <p class="section-subtitle">
+          Motorguiden er for dig, der gerne vil have ærlig, praktisk og nørdet hjælp til scooter og knallert.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon">⚙️</div>
+            <h3>Praktisk erfaring</h3>
+            <p>Jeg har arbejdet med mekanik i mange år og har især interesse for 2-takt, 4-takt, fejlfinding og optimering.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📍</div>
+            <h3>Lokal i Sønderborg Kommune</h3>
+            <p>Jeg holder til i Sønderborg Kommune og hjælper primært kunder i nærområdet og Sønderjylland.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">💬</div>
+            <h3>Direkte kontakt</h3>
+            <p>Du kan nemt tage kontakt via Facebook. Skriv hvad problemet er, så finder vi ud af næste skridt.</p>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Tip til kunder:</strong> Jo bedre du beskriver fejlen, jo hurtigere kan jeg vurdere opgaven. Skriv gerne hvad scooteren gør, hvornår fejlen opstår, og om der er skiftet dele.
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2>Klar til at få hjælp?</h2>
+            <p>
+              Kontakt Motorguiden via Facebook. Søg efter <strong>#MotorGuiden</strong>, eller tryk på knappen herunder.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://www.facebook.com/search/top?q=%23MotorGuiden" target="_blank" rel="noopener">Find #MotorGuiden på Facebook</a>
+              <a class="btn btn-secondary" href="https://www.facebook.com/hashtag/motorguiden" target="_blank" rel="noopener">Se hashtag på Facebook</a>
+              <a class="btn btn-secondary" href="https://www.youtube.com/@Motorguiden" target="_blank" rel="noopener">Se Motorguiden på YouTube</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-row">
+              <strong>Virksomhed</strong>
+              <span>Motorguiden</span>
+            </div>
+            <div class="contact-row">
+              <strong>Område</strong>
+              <span>Sønderborg Kommune og Sønderjylland</span>
+            </div>
+            <div class="contact-row">
+              <strong>Kontakt</strong>
+              <span>Facebook: #MotorGuiden</span>
+            </div>
+            <div class="contact-row">
+              <strong>YouTube</strong>
+              <span>@Motorguiden</span>
+            </div>
+            <div class="contact-row">
+              <strong>Speciale</strong>
+              <span>2-takt, 4-takt, knallert og scooter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © Motorguiden · Lokal i Sønderborg Kommune · Reparation, fejlfinding og justering · YouTube: @Motorguiden
+  </footer>
+</body>
+</html>
